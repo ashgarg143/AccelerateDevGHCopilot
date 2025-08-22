@@ -6,6 +6,14 @@ public class LoanService : ILoanService
 {
     private ILoanRepository _loanRepository;
 
+        // Book availability feature
+        public List<BookItem> GetAvailableBookItems()
+        {
+            // This should be implemented by accessing the repository or data layer
+            // For now, throw to indicate it needs wiring
+            throw new NotImplementedException();
+        }
+
     public LoanService(ILoanRepository loanRepository)
     {
         _loanRepository = loanRepository;

@@ -11,6 +11,12 @@ public class JsonData
     public List<BookItem>? BookItems { get; set; }
     public List<Patron>? Patrons { get; set; }
     public List<Loan>? Loans { get; set; }
+        public List<BookItem> GetAvailableBookItems()
+        {
+            if (BookItems == null)
+                return new List<BookItem>();
+            return BookItems.Where(bi => bi.IsAvailable).ToList();
+        }
 
     private readonly string _authorsPath;
     private readonly string _booksPath;

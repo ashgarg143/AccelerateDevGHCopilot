@@ -7,4 +7,5 @@ public class BookItem
     public DateTime AcquisitionDate { get; set; }
     public string? Condition { get; set; }
     public Book? Book { get; set; }
+    public bool IsAvailable { get; set; } = true;
 }
